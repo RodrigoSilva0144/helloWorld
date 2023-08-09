@@ -1,11 +1,56 @@
 <ion-header>
-  <ion-toolbar color="nova">
-    <ion-title color="dark">
-      Produtos
+  <ion-toolbar color="dark">
+    <ion-title color="warning" class="ion-text-center">
+      Categorias
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-card color="light">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPe8bDMlw-ejlhF1P2OAm5Jx_vszayovDUqeqca9t89u6RsiYo97LFZ1PayiCltOt_F-0&usqp=CAU" alt="">
+        <ion-item color="dark">
+          <ion-label class="titulo-promocao">Confira nossos produtos em promoção</ion-label>
+        </ion-item>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-card color="light">
+        <img src="https://premix.com.br/blog/wp-content/uploads/2022/07/O-que-e-carne-de-vitela-thumbnail.png" alt="">
+        <ion-item color="light">
+          <ion-label>Carnes</ion-label>
+        </ion-item>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card color="light">
+        <img src="https://www.vinicolacampestre.com.br/blog/wp-content/uploads/sites/2/2019/04/260042-afinal-qual-a-diferenca-entre-vinho-fino-e-vinho-de-mesa-1.jpg" alt="">
+        <ion-item color="light">
+          <ion-label>Vinhos</ion-label>
+        </ion-item>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col><ion-card color="light">
+      <img src="https://rafasupervarejao.com.br/37393-thickbox_default/7896005809488-cafe-soluvel-em-po-tradicional-3-coracoes-160g.jpg" alt="">
+        <ion-item color="light">
+          <ion-label>Cefézes</ion-label>
+        </ion-item>
+    </ion-card></ion-col>
+    <ion-col><ion-card color="light">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSckBXddcD88IMrPeO_jYi7QBEL0Sb5lFYeORuOjvR56pnpfW20suJuMcPOgz5ufBbQXjs&usqp=CAU" alt="">
+        <ion-item color="light">
+          <ion-label>beterrabas</ion-label>
+        </ion-item>
+    </ion-card></ion-col>
+  </ion-row>
+</ion-grid>
 
 </ion-content>
