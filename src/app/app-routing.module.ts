@@ -10,7 +10,27 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'promocoes',
+    loadChildren: () => import('./promocoes/promocoes.module').then( m => m.PromocoesPageModule)
   },
+  {
+    path: 'carnes',
+    loadChildren: () => import('./carnes/carnes.module').then( m => m.CarnesPageModule)
+  },
+  {
+    path: 'vinhos',
+    loadChildren: () => import('./vinhos/vinhos.module').then( m => m.VinhosPageModule)
+  },
+  {
+    path: 'cafezes',
+    loadChildren: () => import('./cafezes/cafezes.module').then( m => m.CafezesPageModule)
+  },
+  {
+    path: 'beterrabas',
+    loadChildren: () => import('./beterrabas/beterrabas.module').then( m => m.BeterrabasPageModule)
+  },
+
 ];
 
 @NgModule({
