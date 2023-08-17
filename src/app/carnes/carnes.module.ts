@@ -17,4 +17,34 @@ import { CarnesPage } from './carnes.page';
   ],
   declarations: [CarnesPage]
 })
-export class CarnesPageModule {}
+export class CarnesPageModule {
+
+  listaProdutos = [
+    {nome: "Carne Bovina",
+     descricao: "1200g",
+     valor: 6
+    },
+    {nome: "Carne Suína",
+     descricao: "1200g",
+     valor: 7
+    },
+    {nome: "Carne de Frango",
+     descricao: "300g",
+     valor: 8
+    },
+    {nome: "Carne de Peixe",
+     descricao: "1000g",
+     valor: 9
+    },
+    {nome: "Carne moída",
+     descricao: "500g",
+     valor: 10
+    }
+  ];
+
+  constructor() { }
+
+  ngOnInit() {
+
+  }
+}
