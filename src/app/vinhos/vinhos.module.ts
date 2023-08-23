@@ -17,7 +17,7 @@ import { VinhosPage } from './vinhos.page';
   ],
   declarations: [VinhosPage]
 })
-export class CarnesPageModule {
+export class VinhosPageModule {
 
   listaProdutos = [
     {nome: "Vinho Tinto",

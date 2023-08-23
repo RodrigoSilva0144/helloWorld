@@ -17,7 +17,7 @@ import { BeterrabasPage } from './beterrabas.page';
   ],
   declarations: [BeterrabasPage]
 })
-export class CarnesPageModule {
+export class BeterrabasPageModule {
 
   listaProdutos = [
     {nome: "Beterraba Açucareira",

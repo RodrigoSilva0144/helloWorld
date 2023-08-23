@@ -17,7 +17,7 @@ import { CafezesPage } from './cafezes.page';
   ],
   declarations: [CafezesPage]
 })
-export class CarnesPageModule {
+export class CafezesPageModule {
 
   listaProdutos = [
     {nome: "Café Coração",

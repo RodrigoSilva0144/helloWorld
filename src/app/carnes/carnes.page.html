@@ -15,13 +15,22 @@
 <ion-content [fullscreen]="true">
   <ion-searchbar mode="ios" animated="true" placeholder="Buscar Produtos"></ion-searchbar>
 
-  <ion-item>
-    <ion-label></ion-label>
+  <ion-item lines="full" *ngFor="let produto of listaprodutos">
+    <ion-thumbnail slot="start">
+      <img src="">
+    </ion-thumbnail>
+    <ion-label>
+      <h2>{{produto.nome | uppercase}}</h2>
+      <p>{{produto.descricao}}</p>
+    </ion-label>
+
+    <ion-badge color="dark">R$ {{produto.valor | number:'1.2-2'}}</ion-badge>
+
+    <ion-button slot="end" expand="block" (click)="addProdutoCarrinho(produto)">
+      <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+    </ion-button>
   </ion-item>
 
-    <ion-item *nhFor="let produto of listaProdutos">
-      <ion-label>{{produto.nome}}</ion-label>
-    </ion-item>
 
 </ion-content>
 

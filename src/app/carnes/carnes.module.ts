@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { CarnesPageRoutingModule } from './carnes-routing.module';
 
 import { CarnesPage } from './carnes.page';
+import { BdtempService } from '../services/bdtemp.service';
 
 @NgModule({
   imports: [
@@ -42,9 +43,12 @@ export class CarnesPageModule {
     }
   ];
 
-  constructor() { }
+  constructor(public bdtemp: BdtempService) { }
 
   ngOnInit() {
 
+  }
+  addProdutoCarrinho(produto: any){
+    this.bdtemp.addProdutoCarrinho(produto);
   }
 }
