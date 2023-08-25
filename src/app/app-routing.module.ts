@@ -30,6 +30,10 @@ const routes: Routes = [
     path: 'beterrabas',
     loadChildren: () => import('./beterrabas/beterrabas.module').then( m => m.BeterrabasPageModule)
   },
+  {
+    path: 'carrinho',
+    loadChildren: () => import('./carrinho/carrinho.module').then( m => m.CarrinhoPageModule)
+  },
 
 ];
 

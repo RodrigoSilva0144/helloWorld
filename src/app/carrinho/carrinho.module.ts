@@ -4,19 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CarnesPageRoutingModule } from './carnes-routing.module';
+import { CarrinhoPageRoutingModule } from './carrinho-routing.module';
 
-import { CarnesPage } from './carnes.page';
+import { CarrinhoPage } from './carrinho.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CarnesPageRoutingModule
+    CarrinhoPageRoutingModule
   ],
-  declarations: [CarnesPage]
+  declarations: [CarrinhoPage]
 })
-export class CarnesPageModule {
-
-}
+export class CarrinhoPageModule {}
