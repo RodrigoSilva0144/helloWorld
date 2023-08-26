@@ -1,3 +1,4 @@
+import { BdtempService } from './../services/bdtemp.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PromocoesPage implements OnInit {
 
-  constructor() { }
+  qtdeItensCarrinho = 0;
+
+  listaProdutos =[
+    {
+      nome: "Paleta",
+      descricao: "",
+      valor: 23,
+      foto: ''
+    },
+  ];
+
+  constructor(public bdtemp: BdtempService) { }
 
   ngOnInit() {
   }
+  addProdutoCarrinho(produto: any) {
+    this.bdtemp.addProdutoCarrinho(produto);
+    this.buscarDadosCarrinho();
+  }
 
+  buscarDadosCarrinho() {
+    this.qtdeItensCarrinho = this.bdtemp.buscar('qtdeItensCarrinho');
+
+  }
 }

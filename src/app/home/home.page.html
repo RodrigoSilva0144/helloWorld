@@ -1,56 +1,75 @@
 <ion-header>
   <ion-toolbar color="dark">
-    <ion-title color="warning" class="ion-text-center">
+    <ion-title color="werning" class="ion-text-center">
       Categorias
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" >
+ <ion-grid>
 
-<ion-grid>
   <ion-row>
     <ion-col>
-      <ion-card color="light" routerLink="produtos">
-        <img src="assets/images.png" alt="">
-        <ion-item color="dark">
-          <ion-label class="titulo-promocao">Confira nossos produtos em promoção</ion-label>
-        </ion-item>
+      <ion-card class="banner" color="whitezin" routerLink="/promocoes">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBogrGwmbl1jp2XAzlCOXf5ABVg6OWZ1VfOQ&usqp=CAU">
       </ion-card>
     </ion-col>
   </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-card color="light" routerLink="carnes">
-        <img src="https://premix.com.br/blog/wp-content/uploads/2022/07/O-que-e-carne-de-vitela-thumbnail.png">
-        <ion-item color="light">
-          <ion-label>Carnes</ion-label>
-        </ion-item>
-      </ion-card>
-    </ion-col>
-    <ion-col>
-      <ion-card color="light" routerLink="vinhos">
-        <img src="https://www.vinicolacampestre.com.br/blog/wp-content/uploads/sites/2/2019/04/260042-afinal-qual-a-diferenca-entre-vinho-fino-e-vinho-de-mesa-1.jpg">
-        <ion-item color="light">
-          <ion-label>Vinhos</ion-label>
-        </ion-item>
-      </ion-card>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col><ion-card color="light" routerLink="cafezes">
-      <img src="https://rafasupervarejao.com.br/37393-thickbox_default/7896005809488-cafe-soluvel-em-po-tradicional-3-coracoes-160g.jpg">
-        <ion-item color="light">
-          <ion-label>Cafézes</ion-label>
-        </ion-item>
-    </ion-card></ion-col>
-    <ion-col><ion-card color="light" routerLink="beterrabas">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSckBXddcD88IMrPeO_jYi7QBEL0Sb5lFYeORuOjvR56pnpfW20suJuMcPOgz5ufBbQXjs&usqp=CAU">
-        <ion-item color="light">
-          <ion-label>Beterrabas</ion-label>
-        </ion-item>
-    </ion-card></ion-col>
-  </ion-row>
-</ion-grid>
 
+  <ion-item lines="none" color="dark" style="border-radius: 5px;">
+  </ion-item>
+
+  <ion-row>
+    <ion-col>
+      <ion-card color="dark" class="borda" routerLink="/carnes">
+        <img
+        src=""
+        alt="">
+        <ion-item lines="full" color="dark" class="borda">
+          Carnes
+        </ion-item>
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+      <ion-card color="dark" class="borda" routerLink="/vinhos">
+        <img
+        src=""
+        alt="">
+        <ion-item lines="full" color="dark" class="borda">
+          Vinhos
+        </ion-item>
+      </ion-card>
+    </ion-col>
+
+  </ion-row>
+
+  <ion-row>
+
+    <ion-col>
+      <ion-card color="dark" class="borda" routerLink="/cafezes">
+        <img
+        src=""
+        alt="">
+        <ion-item lines="full" color="dark" class="borda">
+          Cafés
+        </ion-item>
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+      <ion-card color="dark" class="borda" routerLink="/beterrabas">
+        <img
+        src=""
+        alt="">
+        <ion-item lines="full" color="dark" class="borda">
+          Legumes
+        </ion-item>
+      </ion-card>
+    </ion-col>
+
+
+  </ion-row>
+ </ion-grid>
 </ion-content>

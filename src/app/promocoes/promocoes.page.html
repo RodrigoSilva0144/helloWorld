@@ -1,76 +1,35 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-back-button>Button</ion-back-button>
     </ion-buttons>
+    <ion-title>Promocoes</ion-title>
 
-    <ion-title>promoções</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/carrinho">
+        <ion-icon name="cart-outline"></ion-icon>
+        <ion-badge color="warning">{{qtdeItensCarrinho}}</ion-badge>
+      </ion-button>
+
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-searchbar mode="ios" animated="true" placeholder="Buscar Produtos"></ion-searchbar>
 
-  <ion-list>
-    <ion-item lines="full">
-      <ion-thumbnail slot="start">
-        <img  src="https://wessel.com.br/cdn/shop/files/Wessel_embalado_1000x750-min_1024x.jpg?v=1691008407" />
-      </ion-thumbnail>
-      <ion-label><h2>Carnes</h2>
+  <ion-item *ngFor="let produto of listaProdutos" lines="full"  class="borda">
+    <ion-thumbnail slot="start">
+      <img [src]="produto.foto"/>
+    </ion-thumbnail>
+    <ion-label>
+      <h2>{{ produto.nome }}</h2>
+      <p>{{ produto.descricao }}</p>
+    </ion-label>
+    <ion-button expand="block" slot="end" color="primary" (click)="addProdutoCarrinho(produto)">
+      <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+    </ion-button>
+    <ion-badge color="danger">R$ {{ produto.valor | number:'1.2-2' }}</ion-badge>
+  </ion-item>
 
-      <ion-badge color="dark">R$ 30,00</ion-badge>
-
-      </ion-label>
-      <ion-button slot="end" expand="block">
-        <ion-icon slot="ioc-only" name="cart-outline"></ion-icon>
-      </ion-button>
-
-    </ion-item>
-
-    <ion-item lines="full">
-      <ion-thumbnail slot="start">
-        <img  src="https://cdn.dooca.store/1390/products/an6kcu3f2ltlwsl4tpywfj6nmp2wqghvxrkn_450x600+fill_ffffff.png?v=1617904414&webp=0" />
-      </ion-thumbnail>
-      <ion-label><h2>Vinhos</h2>
-
-      <ion-badge color="dark">R$ 55,00</ion-badge>
-
-      </ion-label>
-      <ion-button slot="end" expand="block">
-        <ion-icon slot="ioc-only" name="cart-outline"></ion-icon>
-      </ion-button>
-
-    </ion-item>
-
-    <ion-item lines="full">
-      <ion-thumbnail slot="start">
-        <img  src="https://d3ugyf2ht6aenh.cloudfront.net/stores/034/476/products/cafe-em-po1-7cab97c22a69fac3fb15804352522457-640-0.jpg" />
-      </ion-thumbnail>
-      <ion-label><h2>Cafezes</h2>
-
-      <ion-badge color="dark">R$ 10,00</ion-badge>
-
-      </ion-label>
-      <ion-button slot="end" expand="block">
-        <ion-icon slot="ioc-only" name="cart-outline"></ion-icon>
-      </ion-button>
-
-    </ion-item>
-
-    <ion-item lines="full">
-      <ion-thumbnail slot="start">
-        <img  src="https://giassi.vtexassets.com/arquivos/ids/687126/Beterraba-Kg.jpg?v=638266039915500000" />
-      </ion-thumbnail>
-      <ion-label><h2>Beterrabas</h2>
-
-      <ion-badge color="dark">R$ 2,00</ion-badge>
-
-      </ion-label>
-      <ion-button slot="end" expand="block">
-        <ion-icon slot="ioc-only" name="cart-outline"></ion-icon>
-      </ion-button>
-
-    </ion-item>
-  </ion-list>
 
 </ion-content>

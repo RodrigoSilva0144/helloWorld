@@ -1,26 +1,35 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>cafezes</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button>Button</ion-back-button>
+    </ion-buttons>
+    <ion-title>Promocoes</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button routerLink="/carrinho">
+        <ion-icon name="cart-outline"></ion-icon>
+        <ion-badge color="warning">{{qtdeItensCarrinho}}</ion-badge>
+      </ion-button>
+
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">cafezes</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
 
-<ion-content [fullscreen]="true">
-  <ion-searchbar mode="ios" animated="true" placeholder="Buscar Produtos"></ion-searchbar>
-
-  <ion-item>
-    <ion-label></ion-label>
+  <ion-item *ngFor="let produto of listaProdutos" lines="full"  class="borda">
+    <ion-thumbnail slot="start">
+      <img [src]="produto.foto"/>
+    </ion-thumbnail>
+    <ion-label>
+      <h2>{{ produto.nome }}</h2>
+      <p>{{ produto.descricao }}</p>
+    </ion-label>
+    <ion-button expand="block" slot="end" color="primary" (click)="addProdutoCarrinho(produto)">
+      <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+    </ion-button>
+    <ion-badge color="danger">R$ {{ produto.valor | number:'1.2-2' }}</ion-badge>
   </ion-item>
 
-    <ion-item *nhFor="let produto of listaProdutos">
-      <ion-label>{{produto.nome}}</ion-label>
-    </ion-item>
 
 </ion-content>

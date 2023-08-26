@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { BdtempService } from '../services/bdtemp.service';
+
 @Component({
   selector: 'app-cafezes',
   templateUrl: './cafezes.page.html',
@@ -7,9 +9,51 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CafezesPage implements OnInit {
 
-  constructor() { }
+    qtdeItensCarrinho = 0;
 
-  ngOnInit() {
+
+    listaProdutos = [
+      {nome: "Carne Bovina",
+       descricao: "1200g",
+       valor: 6,
+       foto: 'https://storage.googleapis.com/phygital_files/unicooper/uploads/produto/carne_bovina_bife_patinho_kg_522f26df-3cb3-42e2-ba8d-7868aa3175c1.jpg'
+      },
+      {nome: "Carne Suína",
+       descricao: "1200g",
+       valor: 7,
+       foto: 'data:image/jpeg;base64,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'
+      },
+      {nome: "Carne de Frango",
+       descricao: "300g",
+       valor: 8,
+       foto: 'https://images.tcdn.com.br/img/img_prod/1074417/file_de_peito_de_frango_resfriado_01_kg_483_1_a513bf5ad9564792c24cca22be00ee1c.jpg'
+      },
+      {nome: "Carne de Peixe",
+       descricao: "1000g",
+       valor: 9,
+       foto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQauJ4w8rM4HYfEceBQTJQLXOdNmuKkdIK5Xg&usqp=CAU'
+      },
+      {nome: "Carne moída",
+       descricao: "500g",
+       valor: 10,
+       foto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHsIdguTCBSSk0nAuAGoSsNQbr2e_EWDoS8VaOEwA25Mnp9Gx47uVko9hgLYZzWlirWME&usqp=CAU'
+      }
+    ];
+
+    constructor(public bdtemp: BdtempService) { }
+
+    ngOnInit() {
+
+    }
+    addProdutoCarrinho(produto: any){
+      this.bdtemp.addProdutoCarrinho(produto);
+
+      this.buscarDadosCarrinho();
+    }
+
+    buscarDadosCarrinho(){
+      this.qtdeItensCarrinho = this.bdtemp.buscar('qtdeItensCarrinho');
+    }
+
   }
 
-}

@@ -12,7 +12,7 @@ export class CarnesPage implements OnInit {
     qtdeItensCarrinho = 0;
 
 
-    listaprodutos = [
+    listaProdutos = [
       {nome: "Carne Bovina",
        descricao: "1200g",
        valor: 6,
