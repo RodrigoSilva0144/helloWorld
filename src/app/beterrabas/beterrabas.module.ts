@@ -19,32 +19,4 @@ import { BeterrabasPage } from './beterrabas.page';
 })
 export class BeterrabasPageModule {
 
-  listaProdutos = [
-    {nome: "Beterraba Açucareira",
-     descricao: "Usada para produçao de açúcar",
-     valor: 1
-    },
-    {nome: "Beterraba de mesa",
-     descricao: "Consumida como hortaliça",
-     valor: 2
-    },
-    {nome: "Beterraba forrageira",
-     descricao: "Utilizada para aliemntação animal",
-     valor: 3
-    },
-    {nome: "Beterraba branca",
-     descricao: "Raízes doces e follhas amargas",
-     valor: 4
-    },
-    {nome: "Beterraba Dourada",
-     descricao: "Seu sabor se torna mais adocicado ao assar",
-     valor: 5
-    }
-  ];
-
-  constructor() { }
-
-  ngOnInit() {
-
-  }
 }
