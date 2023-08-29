@@ -11,30 +11,30 @@ export class BeterrabasPage implements OnInit {
   qtdeItensCarrinho = 0;
 
   listaProdutos = [
-    {nome: "beringela",
-     descricao: "",
-     valor: 1,
-     foto:""
+    {nome: "Berinjela",
+     descricao: "Berinjela 500g",
+     valor: .50,
+     foto:"././assets/img/berinjela.jpg"
     },
     {nome: "Tomate",
-     descricao: "",
-     valor: 2,
-     foto:""
+     descricao: "Tomate 500g",
+     valor: 1,
+     foto:"././assets/img/tomate.jpg"
     },
     {nome: "Alface Americana",
-     descricao: "",
-     valor: 3,
-     foto:""
+     descricao: "Alface Americana 1 unidade",
+     valor: 9.20,
+     foto:"././assets/img/alface.webp"
     },
-    {nome: "Cebolinha",
-     descricao: "",
-     valor: 4,
-     foto:""
+    {nome: "Alho roxo",
+     descricao: " Alho roxo 200g",
+     valor: .20,
+     foto:"././assets/img/alho.jpg"
     },
     {nome: "Cenoura",
-     descricao: "",
-     valor: 5,
-     foto:""
+     descricao: "Cenoura 570g",
+     valor: .75,
+     foto:"././assets/img/cenoura.jpg"
     }
   ];
 

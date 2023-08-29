@@ -11,30 +11,30 @@ export class VinhosPage implements OnInit {
   qtdeItensCarrinho = 0;
 
   listaProdutos = [
-    {nome: "Vinho Tinto",
-     descricao: "Produzidos por meio da fermentação do suco extraído de uvas tintas",
-     valor: 16,
-     foto:""
+    {nome: "Vodka Stolinov",
+     descricao: "Bebida alcoólica Vodka Stolinov garrafa 900 ml",
+     valor: 25,
+     foto:"././assets/img/aa9d2bba8b3410bfd5f3e16f6a5503037b17de83bb7ac04940ee36fe0ade948d_full.jpg"
     },
-    {nome: "Vinho Branco",
-     descricao: "Pode ser produzido a partir de uvas brancas e tintas",
-     valor: 17,
-     foto:""
+    {nome: "Whisky Johnnie Walker Red Label",
+     descricao: "Johnnie Walker Red Label Blended Scotch Whisky 1000ml",
+     valor: 110,
+     foto:"././assets/img/red label.png"
     },
-    {nome: "Vinho Rosé",
-     descricao: "É produzido a partir de uvas tintas por diferentes estilos de vinificação",
+    {nome: "Cerveja Heineken Puro Malte Pilsen",
+     descricao: "Cerveja Heineken Puro Malte Pilsen - 12 Unidades Garrafa 600ml",
      valor: 18,
-     foto:""
+     foto:"././assets/img/heineken.webp"
     },
-    {nome: "Vinho Espumante",
-     descricao: "É um tipo de vinho produzido com gás carbônico dissolvido",
-     valor: 19,
-     foto:""
-    },
-    {nome: "Vinho Licoroso",
-     descricao: "Uma bebida que tem a fermentação interrompida antes do término pela adição de aguardente vínica",
+    {nome: "Vinho San Severo Bordo Tinto Suave",
+     descricao: "Vinho San Severo Bordo Tinto Suave 750ml",
      valor: 20,
-     foto:""
+     foto:"././assets/img/vinho.png"
+    },
+    {nome: "Cachaça 51",
+     descricao: "Cachaça 51 965ml",
+     valor: 35,
+     foto:"././assets/img/cachaça.webp"
     }
   ];
 

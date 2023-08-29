@@ -12,11 +12,35 @@ export class PromocoesPage implements OnInit {
 
   listaProdutos =[
     {
-      nome: "Paleta",
-      descricao: "",
-      valor: 23,
-      foto: ''
+      nome: "Alcatra bovino",
+      descricao: "Alcatra Bovina 500g",
+      valor: 16,
+      foto: '././assets/img/alcatra.jpg'
     },
+    {
+      nome: "Paleta",
+      descricao: "Paleta bovina 1kg",
+      valor: 19.30,
+      foto: '././assets/img/paleta.jpg'
+    },
+    {
+      nome: "Açúcar",
+      descricao: "Açúcar Cristal Santa Isabel 5Kg",
+      valor: 13,
+      foto: '././assets/img/açucar.webp'
+    },
+    {
+      nome: "Feijão",
+      descricao: "Feijão Carioca Kicaldo 1kg",
+      valor: 9.80,
+      foto: '././assets/img/feijão.jpg'
+    },
+    {
+      nome: "Café Pilão",
+      descricao: "Café Torrado e Moído Pilão Extra Forte 500g",
+      valor: 18,
+      foto: '././assets/img/cafe.jpg'
+    }
   ];
 
   constructor(public bdtemp: BdtempService) { }

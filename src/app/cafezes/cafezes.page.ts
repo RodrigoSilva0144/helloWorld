@@ -13,29 +13,29 @@ export class CafezesPage implements OnInit {
 
 
     listaProdutos = [
-      {nome: "Café Coração",
-       descricao: "300g - cilíndrico",
+      {nome: "Café 3 Corações",
+       descricao: "Café 3 Corações Tradicional 500g",
        valor: 7,
        foto:""
       },
-      {nome: "Café três Estrelas",
-       descricao: "330g - cilíndrico",
-       valor: 8,
+      {nome: "Achocolatado Pó Original Toddy",
+       descricao: "Achocolatado Pó Original Toddy Pote 370g",
+       valor: 8.50,
        foto:""
       },
-      {nome: "Café Solúvel",
-       descricao: "400g - empacotado",
-       valor: 10,
+      {nome: "Óleo De Soja Soya",
+       descricao: "Óleo De Soja Soya 900 ml",
+       valor: 5.50,
        foto:""
       },
-      {nome: "Café Pílão",
-       descricao: "300g - empacotado",
-       valor: 9,
+      {nome: "Sal Refinado Cisne",
+       descricao: "Sal Refinado Cisne 1kg",
+       valor: 4.25,
        foto:""
       },
-      {nome: "Café Orgânico",
-       descricao: "500g",
-       valor: 14,
+      {nome: "Macarrão de Sêmola Renata",
+       descricao: "Macarrão de Sêmola com Ovos Penne Renata Pacote 500g",
+       valor: 3.90,
        foto:""
       }
     ];
