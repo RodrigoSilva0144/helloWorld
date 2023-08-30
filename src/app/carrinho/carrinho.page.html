@@ -1,9 +1,3 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>carrinho</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
@@ -11,3 +5,45 @@
     </ion-toolbar>
   </ion-header>
 </ion-content>
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/home" expand="block">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  <ion-title color="danger" class="ion-text-center">Carrinho</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-item *ngFor="let produto of listaProdutos; let i = index">
+      <ion-thumbnail slot="start">
+        <img [src]="produto.foto" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2 class="nomeProduto">{{ produto.nome }}</h2>
+        <h4>{{produto.descricao}}</h4>
+      </ion-label>
+
+      <ion-badge class="badge" color="danger">R$ {{ produto.valor | number: '1.2-2' }}</ion-badge>
+
+      <ion-button slot="end" color="danger" (click)="removerDoCarrinho(i)">
+        <ion-icon name="remove-circle-outline"></ion-icon>
+      </ion-button>
+
+    </ion-item>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-label>
+      Total R$ {{ totalCarrinho | number: '1.2-2' }}
+    </ion-label>
+    <ion-buttons slot="end">
+      <ion-button  expand="block" (click)="limparCarrinho()">
+        <ion-icon name="trash-outline" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -16,27 +16,27 @@ export class CafezesPage implements OnInit {
       {nome: "Café 3 Corações",
        descricao: "Café 3 Corações Tradicional 500g",
        valor: 7,
-       foto:""
+       foto:"././assets/img/cafe.jpg"
       },
       {nome: "Achocolatado Pó Original Toddy",
        descricao: "Achocolatado Pó Original Toddy Pote 370g",
        valor: 8.50,
-       foto:""
+       foto:"././assets/img/toddy.jpg"
       },
       {nome: "Óleo De Soja Soya",
        descricao: "Óleo De Soja Soya 900 ml",
        valor: 5.50,
-       foto:""
+       foto:"././assets/img/soya.jpg"
       },
       {nome: "Sal Refinado Cisne",
        descricao: "Sal Refinado Cisne 1kg",
        valor: 4.25,
-       foto:""
+       foto:"././assets/img/sal.jpg"
       },
       {nome: "Macarrão de Sêmola Renata",
        descricao: "Macarrão de Sêmola com Ovos Penne Renata Pacote 500g",
        valor: 3.90,
-       foto:""
+       foto:"././assets/img/macarrão.jpg"
       }
     ];
 
