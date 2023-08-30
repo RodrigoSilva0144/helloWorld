@@ -26,9 +26,9 @@
         <h4>{{produto.descricao}}</h4>
       </ion-label>
 
-      <ion-badge class="badge" color="danger">R$ {{ produto.valor | number: '1.2-2' }}</ion-badge>
+      <ion-badge class="badge" color="dark">Preço: R$ {{ produto.valor | number: '1.2-2' }}</ion-badge>
 
-      <ion-button slot="end" color="danger" (click)="removerDoCarrinho(i)">
+      <ion-button slot="end" color="vmc" (click)="removerDoCarrinho(i)">
         <ion-icon name="remove-circle-outline"></ion-icon>
       </ion-button>
 
@@ -42,7 +42,7 @@
     </ion-label>
     <ion-buttons slot="end">
       <ion-button  expand="block" (click)="limparCarrinho()">
-        <ion-icon name="trash-outline" color="primary"></ion-icon>
+        <ion-icon name="trash-outline" color="vmc-contrast"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
